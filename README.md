@@ -1,55 +1,44 @@
-# CompressoX - Advanced Multi-File Compression Platform
+# CompressoX - Multi-File Compression Platform
 
 <div align="center">
-
-![CompressoX Logo](https://img.shields.io/badge/CompressoX-Multi--File%20Compressor-00ff9d?style=for-the-badge&logo=python)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)
-![Flask](https://img.shields.io/badge/Flask-2.0+-red?style=for-the-badge&logo=flask)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript)
-
 **A powerful, modern file compression application supporting multiple file formats with both lossy and lossless compression algorithms.**
-
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [API Documentation](#api-documentation) • [Architecture](#architecture) • [Contributing](#contributing)
-
 </div>
 
 ---
 
-## 🚀 Features
+## Features
 
 ### 📁 Multi-Format Support
-- **Images**: JPEG, PNG, GIF, BMP, WebP
-- **Videos**: MP4, AVI, MOV, WMV, WebM
+- **Images**: JPEG, PNG
 - **Documents**: PDF, DOCX, DOC
-- **Text Files**: TXT, MD, LOG, HTML, CSS, JS
+- **Text Files**: TXT
 
-### 🔧 Compression Algorithms
+### Compression Algorithms
 - **Lossy Compression**: Optimized for maximum file size reduction
 - **Lossless Compression**: Preserves original quality
 - **Adaptive Quality Control**: 1-100% quality adjustment
 - **Real-time Statistics**: Live compression ratio and size metrics
 
-### 🎯 Advanced Algorithms
+### Advanced Algorithms
 - **Huffman Coding**: Frequency-based compression
 - **Run-Length Encoding (RLE)**: Sequential data compression
 - **LZ77/LZ78**: Dictionary-based compression
 - **DCT Transform**: Discrete Cosine Transform for images/videos
 - **Motion Compensation**: Video frame optimization
 
-### 💻 Modern Interface
+### Modern Interface
 - **Responsive Design**: Works on desktop and mobile
 - **Drag & Drop**: Intuitive file upload
 - **Real-time Preview**: File preview before compression
 - **Progress Tracking**: Live compression progress
-- **Dark Theme**: Modern, eye-friendly interface
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.8 or higher
 - Node.js (optional, for development)
 - Modern web browser
 
-## 🛠️ Installation
+## Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -84,7 +73,7 @@ cd frontend
 npm install
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Start the Backend Server
 ```bash
@@ -110,7 +99,7 @@ python -m http.server 8000
 4. Click "Compress File"
 5. Download your compressed file
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### Web Interface
 1. **File Upload**: Drag files to the upload area or click to browse
@@ -123,14 +112,13 @@ python -m http.server 8000
 
 ### Supported File Types
 
-| File Type | Extensions | Compression Mode |
-|-----------|------------|------------------|
-| Images | .jpg, .jpeg, .png, .bmp, .gif | Lossy/Lossless |
-| Videos | .mp4, .avi, .mov, .wmv | Lossy/Lossless |
-| Documents | .pdf, .docx, .doc | Lossy/Lossless |
-| Text | .txt, .md, .log | Lossy/Lossless |
+| File Type |  Extensions  | Compression Mode |
+|-----------|--------------|------------------|
+| Images    | .jpg, .png   | Lossy/Lossless   |
+| Documents | .pdf, .docx, | Lossy/Lossless   |
+| Text      | .txt         | Lossy/Lossless   |
 
-## 🔌 API Documentation
+## API Documentation
 
 ### Base URL
 ```
@@ -202,7 +190,7 @@ const metadata = await response.json();
 console.log('Compression ratio:', metadata.ratio);
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ### Backend Structure
 ```
@@ -238,10 +226,6 @@ frontend/
 - **Lossy**: JPEG with DCT transform and quantization
 - **Lossless**: PNG with DEFLATE algorithm
 
-#### Video Compression
-- **Lossy**: Motion compensation, DCT transform, frame differencing
-- **Lossless**: Huffman coding, RLE, LZ77 compression
-
 #### PDF Compression
 - **Lossy**: Image compression, structure optimization
 - **Lossless**: Stream compression, object optimization
@@ -250,7 +234,7 @@ frontend/
 - **Lossy**: Image compression, color reduction
 - **Lossless**: Structure optimization, content compression
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 ```
@@ -295,7 +279,7 @@ def compress_new_format(input_path: str, output_path: str, is_lossy: bool = True
     pass
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Backend Testing
 ```bash
@@ -311,12 +295,11 @@ cd frontend
 npm test
 ```
 
-## 📊 Performance
+## Performance
 
 ### Compression Ratios
 - **Text Files**: 2-5x compression (lossless), 3-8x (lossy)
 - **Images**: 2-10x compression (lossy), 1.5-3x (lossless)
-- **Videos**: 3-15x compression (lossy), 2-5x (lossless)
 - **PDFs**: 1.5-4x compression (lossless)
 - **DOCX**: 1.2-3x compression (lossless)
 
@@ -325,59 +308,17 @@ npm test
 - **Medium Files (1-10MB)**: 1-5 seconds
 - **Large Files (10-100MB)**: 5-30 seconds
 
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
-### Contribution Guidelines
-- Follow PEP 8 for Python code
-- Use meaningful commit messages
-- Add tests for new features
-- Update documentation as needed
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **PIL/Pillow**: Image processing capabilities
-- **OpenCV**: Video processing and computer vision
 - **PyPDF2**: PDF manipulation and compression
 - **python-docx**: DOCX file handling
 - **Flask**: Web framework for the backend
-- **Font Awesome**: Icons and UI elements
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/compressox/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/compressox/discussions)
-- **Email**: your.email@example.com
-
-## 🔄 Changelog
-
-### Version 1.0.0 (Current)
-- ✅ Multi-format file compression
-- ✅ Lossy and lossless compression modes
-- ✅ Real-time compression statistics
-- ✅ Modern web interface
-- ✅ RESTful API
-- ✅ Comprehensive algorithm support
-
----
-
-<div align="center">
-
-**Made with ❤️ by [Your Name]**
-
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/compressox?style=social)](https://github.com/yourusername/compressox)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/compressox?style=social)](https://github.com/yourusername/compressox)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/compressox)](https://github.com/yourusername/compressox/issues)
-
-</div>
+### Features
+- Multi-format file compression
+- Lossy and lossless compression modes
+- Real-time compression statistics
+- Modern web interface
+- RESTful API
+- Comprehensive algorithm support
