@@ -8,7 +8,7 @@
 
 ## Features
 
-### 📁 Multi-Format Support
+### Multi-Format Support
 - **Images**: JPEG, PNG
 - **Documents**: PDF, DOCX, DOC
 - **Text Files**: TXT
